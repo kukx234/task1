@@ -1,0 +1,46 @@
+{%schema%}
+{
+    "name": "first section",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+        },
+        {
+            "type": "text",
+            "id": "header_title",
+            "lable": "Heading",
+        }, 
+        {
+            "type": "text",
+            "id": "paragraph_1",
+            "label": "Text 1"
+        },
+        {
+            "type": "text",
+            "id": "paragraph_2",
+            "label": "Text 2"
+        },
+        {
+            "type":  "header",
+            "content": "Button settings"
+        },
+        {
+            "type": "text",
+            "id": "button_text"
+            "label": "Button text"
+        },
+            {
+            "type": "url",
+            "id": "button_url"
+            "label": "Button url"
+        }
+    ],
+    "presets": [
+        {
+            "name": "first_section"
+        }
+    ]
+}
+{%endschema%}

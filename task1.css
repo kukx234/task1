@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.task1_image_wrapper {
+    --aspect-ratio: 1.25;
+}
+
+.task1_image_wrapper img {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.task1 {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.task1_text_wrapper {
+    background: #E3CFCF;
+    padding: 62px 16px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+.task1_title {
+    font-family: Fira Sans;
+    font-size: 24px;
+    font-weight: 275;
+    line-height: 31.2px;
+    text-align: center;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 12px;
+}
+
+.task1_text {
+    font-family: Fira Sans;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20.8px;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 12px;
+}
+
+.task1_text[area-hidden="true"] {
+    visibility: hidden;
+    height: 0px;
+}
+
+.task1_button {
+    border: 1px solid #000000;
+    outline: none;
+    background: transparent;
+    width: min-content;
+    font-weight: 700;
+    padding: 12px 24px 12px 24px;
+    gap: 2px;
+    white-space: nowrap;
+    min-width: 110px;
+    height: 48px;
+    border-radius: 1px 0px 0px 0px;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.task1_content {
+    display: flex;
+    flex-direction: column;
+}
+
+.task1_content > div {
+    position: relative;
+    width: 200%;
+    display: flex;
+}
+
+.hidden {
+    animation: fade_out 700ms linear;
+}
+
+.active {
+    animation: fade_in 700ms cubic-bezier(0.33, 0.97, 0.27, 1.25);
+}
+
+@media only screen and (min-width: 1024px) {
+    .task1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .task1_text_wrapper {
+        padding: 62px 104px;
+    }
+
+    .task1_title {
+        font-size: 32px;
+        line-height: 41.6px;
+    }
+
+    .task1_text {
+        font-size: 18px;
+        line-height: 23.4px;
+    }
+
+    .task1_button {
+        min-width: 170px;
+        height: 52px;
+    }
+}
+
+@keyframes fade_in {
+    0% {
+        scale: 0.5;
+        transform: translateX(150%);
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 1;
+        scale: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes fade_out {
+    0% {
+        opacity: 1;
+        scale: 1;
+        transform: translateX(0%);
+    }
+    100% {
+        scale: 0.5;
+        transform: translateX(-150%);
+        opacity: 0.2;
+        
+    }
+}
